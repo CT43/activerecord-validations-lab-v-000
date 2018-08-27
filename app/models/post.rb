@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
 
 
   def validate_clickbait
-    binding.pry
+  
     #self.title.include?(["Won't Believe", "Secret", "Top #{/[0-9]*/}", "Guess"])
      if [/Won't Believe/, /Secret/, /Top [0-9]*/, /Guess/].any? { |clickbait| clickbait.match title }
        return true
