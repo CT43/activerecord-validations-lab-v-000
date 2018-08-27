@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   validate :validate_clickbait
 
   def validate_clickbait
-    if self.title.include?()
+    self.title.included_in?(["Won't Believe", "Secret", "Top [number]", "Guess"])
 
   end
 end
