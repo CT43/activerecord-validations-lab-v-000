@@ -12,6 +12,8 @@ class Post < ActiveRecord::Base
     #self.title.include?(["Won't Believe", "Secret", "Top #{/[0-9]*/}", "Guess"])
      if [/Won't Believe/, /Secret/, /Top [0-9]*/, /Guess/].any? { |clickbait| clickbait.match title }
        return true
+     else
+       return false
      end
   end
 end
